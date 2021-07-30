@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="d-flex justify-content-around align-items-center fixed-top nav">
+        <div class="col-md-4 col-3">
+            <a [@LogoShow] routerLink="/" class="logo text-white text-decoration-none"><img src="../../../assets/images/logo.png" alt="logo"></a> 
+        </div>
+        <div class="col-md-6 col-5">
+            <ul class="d-flex justify-content-around align-items-center pt-3 list-unstyled">
+                <li *ngFor="let nav of navigation" class="nav-item">
+                    <a routerLink="{{nav.path}}" class="page-scroll nav-link">{{nav.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="imageHeader">
+        <div class="headerImage">
+            <img src="../../../assets/images/h1.jpg" class="img-fluid" alt="img" />
+        </div>
+    </div>
+</div>

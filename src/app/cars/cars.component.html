@@ -1,0 +1,14 @@
+<div class="mx-auto p-5">
+    <div class="col-12 d-flex flex-wrap justify-content-center my-5">
+        <div *ngFor="let car of cars" class="d-flex flex-wrap">
+            <div class="col-10 col-md-4 mx-auto">
+                <img src="../../../assets/images/{{car.img}}" class="img-fluid" alt="{{car.id}}">  
+            </div>
+                <div class="col-10 col-md-7">       
+                    <p> Price per day: <b>{{car.price}} €</b></p>
+                    <p> Description: {{car.description | slice :1 : 80 }} ...</p>
+                    <a routerLink="/cars/{{car.id}}">Details</a>
+                </div>  
+        </div>
+    </div>    
+</div>

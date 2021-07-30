@@ -1,0 +1,19 @@
+<div class="mx-auto p-5">
+    <div class="col-12 d-flex justify-content-center flex-wrap my-3">
+        <img src="../../../assets/images/{{car.img}}" alt="{{car.id}}">
+        <div class="d-flex flex-wrap col-8 shadow p-3 mb-5 bg-body rounded">  
+                <div>       
+                    <p> Price per day: <b>{{car.price}} €</b></p>
+                    <p> Description: {{car.description }}</p>
+                </div>
+                <div class="col-12">
+                    <button *ngIf="!rented" (click)='rent()' class="btn btn-success">
+                        Rent 
+                    </button>           
+                    <div *ngIf="rented" class="coll-3">
+                        <b>Successfull rent!</b>
+                    </div>
+                </div> 
+        </div>
+    </div>    
+</div>
